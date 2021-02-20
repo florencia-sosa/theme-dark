@@ -1,0 +1,34 @@
+@import "../abtract/variables.scss";
+.grid {
+  margin-right: 50px;
+  margin-left: 50px;
+  display: grid;
+  grid-gap: 40px 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 40px 0;
+  .card {
+    background: $blanco;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: $shadowDark;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    min-height: 195px;
+    margin-top: 100px;
+    transition: 0.3s ease all;
+    body.dark & {
+      background: #202538;
+      box-shadow: $sombraLight;
+    }
+    img {
+      vertical-align: top;
+      border-radius: 7px;
+      position: absolute;
+      top: -50px;
+      width: calc(100% - 40px);
+      max-height: 165px;
+      object-fit: cover;
+    }
+  }
+}

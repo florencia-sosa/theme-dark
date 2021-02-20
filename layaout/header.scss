@@ -1,0 +1,66 @@
+@import "../abtract/variables.scss";
+body {
+  background-color: $background-color-primary;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  transition: 0.5s ease all;
+  padding: 0;
+  margin: 0;
+  &.dark {
+    background-color: #343d5b;
+  }
+}
+p {
+  margin: 24px;
+  padding: 0;
+  body.dark & {
+    color: white;
+  }
+}
+
+header {
+  width: 100%;
+  margin: auto;
+  position: fixed;
+  z-index: 1;
+  nav {
+    background-color: $background-header-primary;
+    padding-right: 5px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: $shadowDark;
+    transition: 0.3s ease all;
+    body.dark & {
+      background: #202538;
+      box-shadow: $sombraLight;
+      a {
+        color: $grisClaro;
+        &:hover {
+          color: $blanco;
+        }
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+    }
+    li {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 11px;
+    }
+    a {
+      color: $grisOscuro;
+      text-decoration: none;
+      font-weight: 500;
+      &:hover {
+        color: $azulHover;
+        text-decoration: underline $azul;
+        transition: 0.5s ease all;
+      
+      }
+    }
+  }
+}
